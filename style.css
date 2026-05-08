@@ -127,6 +127,7 @@ main {
   padding: 36px;
   border-radius: 18px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  color: #111827;
 }
 
 .section h2 {
@@ -169,6 +170,7 @@ main {
 
 .about-text p {
   margin-bottom: 12px;
+  color: #111827;
 }
 
 .contact {
@@ -320,4 +322,19 @@ a:hover {
     width: 120px;
     height: 155px;
   } */
+}
+
+.section,
+.section p,
+.section li,
+.section h2,
+.section h3 {
+  color: #111827;
+}
+
+.profile-sidebar,
+.profile-sidebar p,
+.profile-sidebar h1,
+.profile-sidebar strong {
+  color: #111827;
 }
