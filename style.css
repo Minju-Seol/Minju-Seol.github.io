@@ -308,4 +308,16 @@ a:hover {
   .section {
     padding: 24px;
   }
+    .page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-sidebar {
+    position: static;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 155px;
+  }
 }
