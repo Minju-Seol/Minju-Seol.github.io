@@ -340,14 +340,32 @@ a:hover {
 }
 
 a {
-  color: #7dd3a0;
+  color: #4f8f6b;
 }
 
 a:hover {
-  color: #a7f3d0;
+  color: #6fa889;
 }
 
 .date {
-  color: #4ade80;
+  color: #3f7a5c;
   font-weight: 700;
+}
+
+.news-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.date {
+  min-width: 130px;
+  font-weight: 700;
+  color: #4ade80;
+  flex-shrink: 0;
+}
+
+.news-text {
+  flex: 1;
 }
