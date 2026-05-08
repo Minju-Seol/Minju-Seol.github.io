@@ -338,3 +338,16 @@ a:hover {
 .profile-sidebar strong {
   color: #111827;
 }
+
+a {
+  color: #7dd3a0;
+}
+
+a:hover {
+  color: #a7f3d0;
+}
+
+.date {
+  color: #4ade80;
+  font-weight: 700;
+}
