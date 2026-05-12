@@ -204,7 +204,7 @@ a:hover {
 
 .date {
   font-weight: 700;
-  color: #2563eb;
+  color: #2563eb; /*light blue*/
   margin-right: 8px;
 }
 
@@ -360,9 +360,9 @@ a:hover {
 }
 
 .date {
-  min-width: 130px;
+  min-width: 100px;
   font-weight: 700;
-  color: #4ade80;
+  color: #6CD012;
   flex-shrink: 0;
 }
 
