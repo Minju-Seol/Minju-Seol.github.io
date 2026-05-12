@@ -9,7 +9,8 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; */
   line-height: 1.6;
   color: #f3f4f6;
   background-color: #0f1117;
@@ -360,9 +361,9 @@ a:hover {
 }
 
 .date {
-  min-width: 100px;
+  min-width: 80px;
   font-weight: 700;
-  color: #6CD012;
+  color: #26D063;
   flex-shrink: 0;
 }
 
