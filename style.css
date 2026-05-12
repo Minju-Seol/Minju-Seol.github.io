@@ -341,11 +341,13 @@ a:hover {
 }
 
 a {
-  color: #4f8f6b;
+  color: #56c7a5;
 }
 
 a:hover {
-  color: #6fa889;
+  color: #7ee6c2;
+  text-shadow: 0 0 6px rgba(126, 230, 194, 0.3);
+
 }
 
 .date {
@@ -363,7 +365,7 @@ a:hover {
 .date {
   min-width: 80px;
   font-weight: 700;
-  color: #26D063;
+  color: #56c7a5;
   flex-shrink: 0;
 }
 
