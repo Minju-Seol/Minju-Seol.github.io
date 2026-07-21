@@ -213,22 +213,26 @@ a:hover {
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  gap: 13px;
 }
 
 .card {
   background-color: #f9fafb;
   border: 1px solid #e5e7eb;
   border-radius: 14px;
-  padding: 20px;
+  padding: 18px;
 }
 
 .card h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 15px;
+  margin-bottom: 8px;
   color: #111827;
 }
-
+.card p {
+  font-size: 13px;      
+  color: #111827;       
+  line-height: 1.5;     
+}
 /* Timeline */
 .timeline-item {
   margin-bottom: 24px;
