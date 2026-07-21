@@ -375,7 +375,7 @@ a:hover {
 }
 
 /* 리스트 항목 간격 */
-.pub-list li {
+.publication-list li {
   margin-bottom: 20px; /* 논문 항목끼리의 간격 */
   text-align: left;    /* 줄바꿈이 많을 때는 좌측 정렬이 훨씬 깔끔해요! */
 }
