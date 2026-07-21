@@ -250,7 +250,7 @@ main {
 .timeline-item {
   margin-bottom: 24px;
   padding-left: 18px;
-  border-left: 3px solid rgba(255, 255, 255, 0.8);
+  border-left: 3px solid rgba(63, 191, 149, 0.70);
 }
 
 .timeline-item h3 {
