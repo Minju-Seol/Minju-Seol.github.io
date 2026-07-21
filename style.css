@@ -10,13 +10,23 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; */
   line-height: 1.6;
   color: #f3f4f6;
   background-color: #0f1117;
 }
 
-/* Header */
+/* Links */
+a {
+  color: #3fbf95;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7ee6c2;
+  text-shadow: 0 0 6px rgba(126, 230, 194, 0.3);
+}
+
+/* Header & Nav */
 .header {
   background-color: #161b22;
   border-bottom: 1px solid #2d333b;
@@ -48,7 +58,6 @@ body {
 }
 
 .nav-links a {
-  text-decoration: none;
   color: #d1d5db;
   font-size: 14px;
   font-weight: 500;
@@ -56,6 +65,7 @@ body {
 
 .nav-links a:hover {
   color: #60a5fa;
+  text-shadow: none;
 }
 
 /* Main Layout */
@@ -64,6 +74,7 @@ main {
   margin: 0 auto;
   padding: 32px 40px;
 }
+
 .page-layout {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -71,6 +82,11 @@ main {
   align-items: start;
 }
 
+.main-content {
+  min-width: 0;
+}
+
+/* Sidebar Profile */
 .profile-sidebar {
   background-color: #e5e7eb;
   padding: 24px 20px;
@@ -79,21 +95,13 @@ main {
   text-align: center;
   position: sticky;
   top: 100px;
+  color: #111827;
 }
-
-/* .profile-photo {
-  width: 130px;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 2px solid #e5e7eb;
-  margin-bottom: 18px;
-} */
 
 .profile-sidebar h1 {
   font-size: 24px;
   margin-bottom: 6px;
-  color: #e5e7eb;
+  color: #111827;
 }
 
 .profile-title {
@@ -118,10 +126,7 @@ main {
   margin-bottom: 4px;
 }
 
-.main-content {
-  min-width: 0;
-}
-
+/* Sections General */
 .section {
   background-color: #e5e7eb;
   margin-bottom: 28px;
@@ -129,17 +134,24 @@ main {
   border-radius: 18px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
   color: #111827;
+  scroll-margin-top: 75px; /* 상단 메뉴 클릭 시 Header에 제목 안 가려지게 보정! */
 }
 
 .section h2 {
   font-size: 26px;
   margin-bottom: 22px;
   color: #111827;
-  border-bottom: 2px solid #e5e7eb;
+  border-bottom: 2px solid #d1d5db;
   padding-bottom: 10px;
 }
 
-/* About */
+.section p,
+.section li,
+.section h3 {
+  color: #111827;
+}
+
+/* About Section */
 .about-container {
   display: flex;
   gap: 36px;
@@ -185,31 +197,30 @@ main {
   margin-bottom: 6px;
 }
 
-a {
-  color: #2563eb;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* News */
+/* News Section */
 .news-list {
   list-style: none;
 }
 
 .news-list li {
-  margin-bottom: 12px;
-  padding-left: 4px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 16px;
 }
 
 .date {
+  min-width: 80px;
   font-weight: 700;
-  color: #2563eb; /*light blue*/
-  margin-right: 8px;
+  color: #3fbf95;
+  flex-shrink: 0;
 }
 
-/* Cards */
+.news-text {
+  flex: 1;
+}
+
+/* Cards Section (Research Interests) */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -228,12 +239,14 @@ a:hover {
   margin-bottom: 8px;
   color: #111827;
 }
+
 .card p {
-  font-size: 15px;      
-  color: #111827;       
-  line-height: 1.5;     
+  font-size: 15px;
+  color: #111827;
+  line-height: 1.5;
 }
-/* Timeline */
+
+/* Timeline (Education / Experience) */
 .timeline-item {
   margin-bottom: 24px;
   padding-left: 18px;
@@ -252,7 +265,7 @@ a:hover {
   margin-bottom: 4px;
 }
 
-/* Publications */
+/* Publications Section */
 .publication-category {
   font-size: 20px;
   margin-top: 22px;
@@ -266,7 +279,27 @@ a:hover {
 }
 
 .publication-list li {
-  margin-bottom: 12px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.pub-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 3px;
+}
+
+.pub-authors {
+  font-size: 15px;
+  color: #4b5563;
+  margin-bottom: 2px;
+}
+
+.pub-venue {
+  font-size: 15px;
+  color: #6b7280;
+  margin-bottom: 2px;
 }
 
 /* Simple list */
@@ -286,16 +319,96 @@ a:hover {
   font-size: 14px;
 }
 
-/* Mobile */
+/* Mobile (Responsive) */
 @media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
+  /* 흰색 박스 너비 시원하게 펼치기 */
+  main {
+    padding: 16px 8px;
+  }
+
+  .page-layout {
+    grid-template-columns: 1fr;
     gap: 12px;
   }
 
-  .nav-links {
-    gap: 10px;
+  .section {
+    padding: 16px 14px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+  }
+
+  /* 글씨 크기 아기자기하게 조절 */
+  .section h2 {
+    font-size: 20px;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+  }
+
+  .section h3, .publication-category {
+    font-size: 16px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+
+  .about-text h1 {
+    font-size: 22px;
+  }
+
+  .about-text h2 {
+    font-size: 15px;
+  }
+
+  .about-text p, .section p, .profile-info {
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+
+  /* Publications & News 모바일 폰트 */
+  .publication-list {
+    padding-left: 16px;
+  }
+
+  .pub-title {
+    font-size: 14px;
+  }
+
+  .pub-authors, .pub-venue {
+    font-size: 12.5px;
+  }
+
+  .news-list li {
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 12px;
+  }
+
+  .date {
+    font-size: 12px;
+  }
+
+  .news-text {
+    font-size: 13.5px;
+  }
+
+  /* 모바일 레이아웃 및 프로필 */
+  .profile-sidebar {
+    position: static;
+    padding: 16px 14px;
+    border-radius: 12px;
+  }
+
+  .profile-sidebar h1 {
+    font-size: 20px;
+  }
+
+  .profile-title {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .about-container {
@@ -308,100 +421,13 @@ a:hover {
     height: 155px;
   }
 
-  .card-grid {
-    grid-template-columns: 1fr;
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
-  .section {
-    padding: 24px;
+  .nav-links {
+    gap: 10px;
   }
-    .page-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .profile-sidebar {
-    position: static;
-  }
-
-  /* .profile-photo {
-    width: 120px;
-    height: 155px;
-  } */
-}
-
-.section,
-.section p,
-.section li,
-.section h2,
-.section h3 {
-  color: #111827;
-}
-
-.profile-sidebar,
-.profile-sidebar p,
-.profile-sidebar h1,
-.profile-sidebar strong {
-  color: #111827;
-}
-
-a {
-  color: #3fbf95;
-}
-
-a:hover {
-  color: #7ee6c2;
-  text-shadow: 0 0 6px rgba(126, 230, 194, 0.3);
-
-}
-
-.date {
-  color: #3f7a5c;
-  font-weight: 700;
-}
-
-.news-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
-  margin-bottom: 16px;
-}
-
-.date {
-  min-width: 80px;
-  font-weight: 700;
-  color: #3fbf95
-;
-  flex-shrink: 0;
-}
-
-.news-text {
-  flex: 1;
-}
-
-/* 리스트 항목 간격 */
-.publication-list li {
-  margin-bottom: 20px; /* 논문 항목끼리의 간격 */
-  text-align: left;    /* 줄바꿈이 많을 때는 좌측 정렬이 훨씬 깔끔해요! */
-}
-
-/* 1. 제목 세팅 (가장 크고 굵게) */
-.pub-title {
-  font-size: 16px;
-  font-weight: 700;    /* 굵은 글씨 */
-  color: #111827;      /* 가독성 높은 진한 색상 */
-  margin-bottom: 3px;  /* 제목과 저자 사이 미세 간격 */
-}
-
-/* 2. 저자 목록 세팅 (약간 부드러운 색상) */
-.pub-authors {
-  font-size: 15px;
-  color: #4b5563;
-  margin-bottom: 2px;
-}
-
-/* 3. 저널/학회/날짜 세팅 */
-.pub-venue {
-  font-size: 15px;
-  color: #6b7280;
-  margin-bottom: 2px;
 }
