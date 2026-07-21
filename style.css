@@ -323,7 +323,7 @@ main {
 @media (max-width: 768px) {
   /* 흰색 박스 너비 시원하게 펼치기 */
   main {
-    padding: 16px 8px;
+    padding: 16px 4px;
   }
 
   .page-layout {
@@ -332,15 +332,15 @@ main {
   }
 
   .section {
-    padding: 16px 14px;
+    padding: 12px 10px;
     margin-bottom: 16px;
     border-radius: 12px;
   }
 
   /* 글씨 크기 아기자기하게 조절 */
   .section h2 {
-    font-size: 20px;
-    margin-bottom: 14px;
+    font-size: 16px;
+    margin-bottom: 12px;
     padding-bottom: 6px;
   }
 
@@ -365,15 +365,15 @@ main {
 
   /* Publications & News 모바일 폰트 */
   .publication-list {
-    padding-left: 16px;
+    padding-left: 14px;
   }
 
   .pub-title {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .pub-authors, .pub-venue {
-    font-size: 12.5px;
+    font-size: 11px;
   }
 
   .news-list li {
@@ -383,11 +383,11 @@ main {
   }
 
   .date {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .news-text {
-    font-size: 13.5px;
+    font-size: 11px;
   }
 
   /* 모바일 레이아웃 및 프로필 */
