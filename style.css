@@ -105,7 +105,7 @@ main {
 }
 
 .profile-title {
-  font-size: 15px;
+  font-size: 14px;
   color: #4b5563;
   margin-bottom: 20px;
 }
@@ -151,50 +151,14 @@ main {
   color: #111827;
 }
 
-/* About Section */
-.about-container {
-  display: flex;
-  gap: 36px;
-  align-items: center;
+/* Text alignment: About Me & News/Awards body text are justified,
+   everything else (cards, publications) stays left-aligned by default. */
+#about p {
+  text-align: justify;
 }
 
-.about-image img {
-  width: 130px;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 4px;
-  border: 1px solid #e5e7eb;
-}
-
-.about-text h1 {
-  font-size: 34px;
-  margin-bottom: 6px;
-  color: #111827;
-}
-
-.about-text h2 {
-  font-size: 20px;
-  font-weight: 500;
-  color: #4b5563;
-  border-bottom: none;
-  margin-bottom: 18px;
-  padding-bottom: 0;
-}
-
-.about-text p {
-  margin-bottom: 12px;
-  color: #111827;
-}
-
-.contact {
-  margin-top: 18px;
-  padding: 16px;
-  background-color: #f3f4f6;
-  border-radius: 12px;
-}
-
-.contact p {
-  margin-bottom: 6px;
+.news-list .news-text {
+  text-align: justify;
 }
 
 /* News Section */
@@ -211,6 +175,7 @@ main {
 
 .date {
   min-width: 80px;
+  font-size: 14px;
   font-weight: 700;
   color: #3fbf95;
   flex-shrink: 0;
@@ -218,6 +183,7 @@ main {
 
 .news-text {
   flex: 1;
+  font-size: 16px;
 }
 
 /* Cards Section (Research Interests) */
@@ -241,7 +207,7 @@ main {
 }
 
 .card p {
-  font-size: 15px;
+  font-size: 16px;
   color: #111827;
   line-height: 1.5;
 }
@@ -249,8 +215,6 @@ main {
 /* Timeline (Education / Experience) */
 .timeline-item {
   margin-bottom: 24px;
-  padding-left: 18px;
-  border-left: 3px solid rgba(63, 191, 149, 0.3);
 }
 
 .timeline-item h3 {
@@ -260,6 +224,7 @@ main {
 }
 
 .sub-info {
+  font-size: 14px;
   color: #4b5563;
   font-weight: 500;
   margin-bottom: 4px;
@@ -291,24 +256,15 @@ main {
 }
 
 .pub-authors {
-  font-size: 15px;
+  font-size: 14px;
   color: #4b5563;
   margin-bottom: 2px;
 }
 
 .pub-venue {
-  font-size: 15px;
+  font-size: 14px;
   color: #6b7280;
   margin-bottom: 2px;
-}
-
-/* Simple list */
-.simple-list {
-  list-style: none;
-}
-
-.simple-list li {
-  margin-bottom: 12px;
 }
 
 /* Footer */
@@ -350,15 +306,7 @@ main {
     margin-bottom: 8px;
   }
 
-  .about-text h1 {
-    font-size: 22px;
-  }
-
-  .about-text h2 {
-    font-size: 15px;
-  }
-
-  .about-text p, .section p, .profile-info {
+  .section p, .profile-info {
     font-size: 13.5px;
     line-height: 1.5;
   }
@@ -409,16 +357,6 @@ main {
   .card-grid {
     grid-template-columns: 1fr;
     gap: 12px;
-  }
-
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-image img {
-    width: 120px;
-    height: 155px;
   }
 
   .nav {
