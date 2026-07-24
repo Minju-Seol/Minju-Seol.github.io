@@ -105,14 +105,14 @@ main {
 }
 
 .profile-title {
-  font-size: 14px;
+  font-size: 15px;
   color: #4b5563;
   margin-bottom: 20px;
 }
 
 .profile-info {
   text-align: left;
-  font-size: 14px;
+  font-size: 15px;
   color: #374151;
 }
 
@@ -175,7 +175,7 @@ main {
 
 .date {
   min-width: 80px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: #3fbf95;
   flex-shrink: 0;
@@ -207,7 +207,7 @@ main {
 }
 
 .card p {
-  font-size: 16px;
+  font-size: 15px;
   color: #111827;
   line-height: 1.5;
 }
@@ -224,7 +224,7 @@ main {
 }
 
 .sub-info {
-  font-size: 14px;
+  font-size: 16px;
   color: #4b5563;
   font-weight: 500;
   margin-bottom: 4px;
@@ -256,13 +256,13 @@ main {
 }
 
 .pub-authors {
-  font-size: 14px;
+  font-size: 16px;
   color: #4b5563;
   margin-bottom: 2px;
 }
 
 .pub-venue {
-  font-size: 14px;
+  font-size: 16px;
   color: #6b7280;
   margin-bottom: 2px;
 }
@@ -317,11 +317,11 @@ main {
   }
 
   .pub-title {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .pub-authors, .pub-venue {
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .news-list li {
@@ -331,11 +331,11 @@ main {
   }
 
   .date {
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .news-text {
-    font-size: 11px;
+    font-size: 14px;
   }
 
   /* 모바일 레이아웃 및 프로필 */
@@ -350,7 +350,7 @@ main {
   }
 
   .profile-title {
-    font-size: 13px;
+    font-size: 14px;
     margin-bottom: 12px;
   }
 
