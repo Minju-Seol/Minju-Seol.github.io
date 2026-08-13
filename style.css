@@ -129,7 +129,22 @@ main {
   color: #111827;
   margin-bottom: 4px;
 }
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 16px;
+}
 
+.social-icons a {
+  color: #111827;
+  font-size: 22px;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: #7ee6c2; /* 기존 초록 링크색과 다르면 이 값 조정해주세요 */
+}
 .section {
   background-color: #e5e7eb;
   margin-bottom: 28px;
