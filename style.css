@@ -1,0 +1,371 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #f3f4f6;
+  background-color: #0f1117;
+}
+
+/* Links */
+a {
+  color: #3fbf95;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7ee6c2;
+  text-shadow: 0 0 6px rgba(126, 230, 194, 0.3);
+}
+
+/* Header & Nav */
+.header {
+  background-color: #161b22;
+  border-bottom: 1px solid #2d333b;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #f3f4f6;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #d1d5db;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #3fbf95;
+  text-shadow: none;
+}
+
+/* Main Layout */
+main {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 32px 40px;
+}
+
+.page-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.main-content {
+  min-width: 0;
+}
+
+/* Sidebar Profile */
+.profile-sidebar {
+  background-color: #e5e7eb;
+  padding: 24px 20px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  position: sticky;
+  top: 100px;
+  color: #111827;
+}
+
+.profile-sidebar h1 {
+  font-size: 24px;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.profile-title {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  text-align: left;
+  font-size: 14px;
+  color: #374151;
+}
+
+.profile-info p {
+  margin-bottom: 14px;
+}
+
+.profile-info strong {
+  display: block;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+/* Sections General */
+.section {
+  background-color: #e5e7eb;
+  margin-bottom: 28px;
+  padding: 36px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  color: #111827;
+  scroll-margin-top: 75px;
+}
+
+.section h2 {
+  font-size: 26px;
+  margin-bottom: 22px;
+  color: #111827;
+  border-bottom: 2px solid #d1d5db;
+  padding-bottom: 10px;
+}
+
+.section p,
+.section li,
+.section h3 {
+  color: #111827;
+}
+
+/* Text alignment: About Me & News/Awards body text are justified,
+   everything else (cards, publications) stays left-aligned by default. */
+#about p {
+  text-align: justify;
+}
+
+.news-list .news-text {
+  text-align: justify;
+}
+
+/* News Section */
+.news-list {
+  list-style: none;
+}
+
+.news-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.date {
+  min-width: 80px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3fbf95;
+  flex-shrink: 0;
+}
+
+.news-text {
+  flex: 1;
+  font-size: 16px;
+}
+
+/* Cards Section (Research Interests) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+}
+
+.card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.card p {
+  font-size: 16px;
+  color: #111827;
+  line-height: 1.5;
+}
+
+/* Timeline (Education / Experience) */
+.timeline-item {
+  margin-bottom: 24px;
+}
+
+.timeline-item h3 {
+  font-size: 20px;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.sub-info {
+  font-size: 14px;
+  color: #4b5563;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+/* Publications Section */
+.publication-category {
+  font-size: 20px;
+  margin-top: 22px;
+  margin-bottom: 12px;
+  color: #374151;
+}
+
+.publication-list {
+  padding-left: 24px;
+  margin-bottom: 12px;
+}
+
+.publication-list li {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.pub-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 3px;
+}
+
+.pub-authors {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 2px;
+}
+
+.pub-venue {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 2px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 28px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Mobile (Responsive) */
+@media (max-width: 768px) {
+  /* 흰색 박스 너비 시원하게 펼치기 */
+  main {
+    padding: 16px 4px;
+  }
+
+  .page-layout {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .section {
+    padding: 12px 10px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+  }
+
+  /* 글씨 크기 아기자기하게 조절 */
+  .section h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+  }
+
+  .section h3, .publication-category {
+    font-size: 16px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+
+  .section p, .profile-info {
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+
+  /* Publications & News 모바일 폰트 */
+  .publication-list {
+    padding-left: 14px;
+  }
+
+  .pub-title {
+    font-size: 12px;
+  }
+
+  .pub-authors, .pub-venue {
+    font-size: 11px;
+  }
+
+  .news-list li {
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 12px;
+  }
+
+  .date {
+    font-size: 11px;
+  }
+
+  .news-text {
+    font-size: 11px;
+  }
+
+  /* 모바일 레이아웃 및 프로필 */
+  .profile-sidebar {
+    position: static;
+    padding: 16px 14px;
+    border-radius: 12px;
+  }
+
+  .profile-sidebar h1 {
+    font-size: 20px;
+  }
+
+  .profile-title {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+}
