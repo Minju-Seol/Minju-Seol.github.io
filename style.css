@@ -15,7 +15,6 @@ body {
   background-color: #0f1117;
 }
 
-/* Links */
 a {
   color: #3fbf95;
   text-decoration: none;
@@ -64,11 +63,10 @@ a:hover {
 }
 
 .nav-links a:hover {
-  color: #3fbf95;
+  color: #60a5fa;
   text-shadow: none;
 }
 
-/* Main Layout */
 main {
   max-width: 1450px;
   margin: 0 auto;
@@ -97,7 +95,13 @@ main {
   top: 100px;
   color: #111827;
 }
-
+.profile-photo {
+  width: 150px;           /* 'Minju Seol' 글씨 너비보다 살짝 넓은 크기 */
+  height: auto;           /* 원본 사진 비율을 왜곡 없이 유지 */
+  display: block;
+  margin: 0 auto 16px auto; /* 중앙 정렬 및 아래 이름과의 간격 */
+  border-radius: 0;       /* 완전 직사각형 유지 */
+}
 .profile-sidebar h1 {
   font-size: 24px;
   margin-bottom: 6px;
@@ -105,14 +109,14 @@ main {
 }
 
 .profile-title {
-  font-size: 14px;
+  font-size: 15px;
   color: #4b5563;
   margin-bottom: 20px;
 }
 
 .profile-info {
   text-align: left;
-  font-size: 14px;
+  font-size: 15px;
   color: #374151;
 }
 
@@ -126,7 +130,6 @@ main {
   margin-bottom: 4px;
 }
 
-/* Sections General */
 .section {
   background-color: #e5e7eb;
   margin-bottom: 28px;
@@ -134,7 +137,7 @@ main {
   border-radius: 18px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
   color: #111827;
-  scroll-margin-top: 75px;
+  scroll-margin-top: 75px; 
 }
 
 .section h2 {
@@ -151,8 +154,6 @@ main {
   color: #111827;
 }
 
-/* Text alignment: About Me & News/Awards body text are justified,
-   everything else (cards, publications) stays left-aligned by default. */
 #about p {
   text-align: justify;
 }
@@ -161,7 +162,6 @@ main {
   text-align: justify;
 }
 
-/* News Section */
 .news-list {
   list-style: none;
 }
@@ -175,7 +175,7 @@ main {
 
 .date {
   min-width: 80px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: #3fbf95;
   flex-shrink: 0;
@@ -186,7 +186,6 @@ main {
   font-size: 16px;
 }
 
-/* Cards Section (Research Interests) */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -207,12 +206,11 @@ main {
 }
 
 .card p {
-  font-size: 16px;
+  font-size: 15px;
   color: #111827;
   line-height: 1.5;
 }
 
-/* Timeline (Education / Experience) */
 .timeline-item {
   margin-bottom: 24px;
 }
@@ -224,7 +222,7 @@ main {
 }
 
 .sub-info {
-  font-size: 14px;
+  font-size: 16px;
   color: #4b5563;
   font-weight: 500;
   margin-bottom: 4px;
@@ -256,18 +254,17 @@ main {
 }
 
 .pub-authors {
-  font-size: 14px;
+  font-size: 15px;
   color: #4b5563;
   margin-bottom: 2px;
 }
 
 .pub-venue {
-  font-size: 14px;
+  font-size: 15px;
   color: #6b7280;
   margin-bottom: 2px;
 }
 
-/* Footer */
 .footer {
   text-align: center;
   padding: 28px;
@@ -275,97 +272,122 @@ main {
   font-size: 14px;
 }
 
-/* Mobile (Responsive) */
+/* Mobile ---------------------------------------------------------------------*/
 @media (max-width: 768px) {
-  /* 흰색 박스 너비 시원하게 펼치기 */
   main {
-    padding: 16px 4px;
+    padding: 20px 16px;
   }
 
   .page-layout {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 20px;
   }
 
   .section {
-    padding: 12px 10px;
-    margin-bottom: 16px;
-    border-radius: 12px;
+    padding: 24px 20px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    scroll-margin-top: 135px; 
   }
 
-  /* 글씨 크기 아기자기하게 조절 */
+  .card h3 {
+    margin-top: 0;
+  }
+
   .section h2 {
-    font-size: 16px;
-    margin-bottom: 12px;
-    padding-bottom: 6px;
+    font-size: 20px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
   }
 
-  .section h3, .publication-category {
-    font-size: 16px;
-    margin-top: 14px;
+  .section h3, 
+  .publication-category,
+  .timeline-item h3 {
+    font-size: 17px;
+    margin-top: 16px;
     margin-bottom: 8px;
   }
 
-  .section p, .profile-info {
-    font-size: 13.5px;
-    line-height: 1.5;
+  .section p, 
+  .profile-info,
+  .news-text,
+  .pub-authors, 
+  .pub-venue {
+    font-size: 14.5px;
+    line-height: 1.55;
   }
 
-  /* Publications & News 모바일 폰트 */
-  .publication-list {
-    padding-left: 14px;
-  }
-
-  .pub-title {
-    font-size: 12px;
-  }
-
-  .pub-authors, .pub-venue {
-    font-size: 11px;
+  #about p,
+  .news-list .news-text {
+    text-align: left;
   }
 
   .news-list li {
     flex-direction: column;
-    gap: 2px;
-    margin-bottom: 12px;
+    gap: 4px;
+    margin-bottom: 16px;
   }
 
   .date {
-    font-size: 11px;
+    font-size: 14px;
   }
 
-  .news-text {
-    font-size: 11px;
-  }
-
-  /* 모바일 레이아웃 및 프로필 */
-  .profile-sidebar {
-    position: static;
-    padding: 16px 14px;
-    border-radius: 12px;
-  }
-
-  .profile-sidebar h1 {
-    font-size: 20px;
-  }
-
-  .profile-title {
-    font-size: 13px;
+  .publication-list {
+    padding-left: 20px;
     margin-bottom: 12px;
   }
 
-  .card-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
+  .pub-title {
+    font-size: 15.5px;
+    line-height: 1.4;
   }
 
+  .profile-sidebar {
+    position: static;
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+
+  .profile-sidebar h1 {
+    font-size: 22px;
+  }
+
+  .profile-title {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    gap: 13px;
+  }
+  
+  .card {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 18px;
+  }
+  
+  .card h3 {
+    font-size: 16px;
+    margin-top: 0; 
+    margin-bottom: 8px;
+    color: #111827;
+  }
   .nav {
+    padding: 14px 16px;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
 
   .nav-links {
-    gap: 10px;
+    gap: 12px 14px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
   }
 }
