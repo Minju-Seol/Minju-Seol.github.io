@@ -12,22 +12,22 @@ body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   color: #f3f4f6;
-  background-color: #0f1117;
+  background-color: #E8E7EE;
 }
 
 a {
-  color: #3fbf95;
+  color: #8B5CF6;
   text-decoration: none;
 }
 
 a:hover {
-  color: #7ee6c2;
+  color: #E06C9F;
   text-shadow: 0 0 6px rgba(126, 230, 194, 0.3);
 }
 
 /* Header & Nav */
 .header {
-  background-color: #161b22;
+  background-color: #E8E7EE;
   border-bottom: 1px solid #2d333b;
   position: sticky;
   top: 0;
@@ -46,7 +46,7 @@ a:hover {
 .site-title {
   font-size: 20px;
   font-weight: 700;
-  color: #f3f4f6;
+  color: #181824;
 }
 
 .nav-links {
@@ -57,13 +57,13 @@ a:hover {
 }
 
 .nav-links a {
-  color: #d1d5db;
+  color: #4b5563;
   font-size: 14px;
   font-weight: 500;
 }
 
 .nav-links a:hover {
-  color: #60a5fa;
+  color: #E06C9F;
   text-shadow: none;
 }
 
@@ -86,7 +86,7 @@ main {
 
 /* Sidebar Profile */
 .profile-sidebar {
-  background-color: #e5e7eb;
+  background-color: #F5F5F5;
   padding: 24px 20px;
   border-radius: 18px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
@@ -146,7 +146,7 @@ main {
   color: #7ee6c2; /* 기존 초록 링크색과 다르면 이 값 조정해주세요 */
 }
 .section {
-  background-color: #e5e7eb;
+  background-color: #F5F5F5;
   margin-bottom: 28px;
   padding: 36px;
   border-radius: 18px;
@@ -192,7 +192,7 @@ main {
   min-width: 80px;
   font-size: 16px;
   font-weight: 700;
-  color: #3fbf95;
+  color: #8B5CF6;
   flex-shrink: 0;
 }
 
