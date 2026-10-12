@@ -28,7 +28,7 @@ a:hover {
 /* Header & Nav */
 .header {
   background-color: #E8E7EE;
-  border-bottom: 1px solid #2d333b;
+  border-bottom: 1px solid #d5d3e0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -143,7 +143,7 @@ main {
 }
 
 .social-icons a:hover {
-  color: #7ee6c2; /* 기존 초록 링크색과 다르면 이 값 조정해주세요 */
+  color: #E06C9F;
 }
 .section {
   background-color: #F5F5F5;
